@@ -17,7 +17,7 @@ app.add_middleware(
 with open("telemetry.json") as f:
     data = json.load(f)
 
-@app.post("/api/latency")
+@app.post("/api/index")
 def get_latency(payload: dict):
     regions = payload["regions"]
     threshold = payload["threshold_ms"]
